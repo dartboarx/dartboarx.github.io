@@ -2,12 +2,12 @@ body {
     margin: 0;
     overflow: hidden;
     touch-action: none;
-    position: static
+    position: static;
 }
 
 * {
     font-family: Dartel Mono, Consolas, monospace, courier new, Courier, special;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 canvas {
@@ -87,12 +87,13 @@ h3 {
 
 #info {
     background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 25cqmin 25cqmin 0 0;
+    border-radius: 8px 8px 0 0;
     padding: 4px 10px;
     font-size: 18px;
     pointer-events: auto;
@@ -133,7 +134,9 @@ h3 {
   gap: 10px;
   margin-left: 0;
   transition: margin-left .12s ease, transform .12s ease, background-color .28s ease;
-  align-items: flex-start; 
+  align-items: flex-start;
+    backdrop-filter: blur(4px);
+
 }
 body.menu-open #bubbles {
   transform: translateX(300px); /* match sidemenu width */
@@ -221,7 +224,7 @@ body.menu-open #bubbles {
 .badge {
     background-color: #fff;
     color: #000;
-    border-radius: 50cqmin;
+    border-radius: 50%;
     corner-shape: squircle;
     padding: 1px 4px;
     font-size: 164x;
@@ -413,7 +416,7 @@ input {
     box-sizing: border-box;
     overflow: auto;
     transition: all 50ms;
-    border-radius: 50cqmin;
+    border-radius: 100%;
     corner-shape: squircle;
     margin: 4px;
     cursor: pointer;
@@ -545,9 +548,9 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    border: 1px solid rgba(98, 1, 1, 1);
-    background-color: rgba(39, 11, 11, 1);
-    color: #fff;
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(4px);
+    border: 1px solid #fff;
     margin: 15px;
     padding: 5px;
     width: 330px;
@@ -727,13 +730,13 @@ td {
     position: relative; 
     width: 300px;
     background: rgba(0,0,0,.75);
+    backdrop-filter: blur(4px);
+    border: 1px solid #fff;
     padding: 12px;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
     box-shadow: 0 6px 18px rgba(129,30,159,.25);
-    backdrop-filter: blur(6px);
-    border: 1px solid #fff;
     gap: 8px;
 }
 #stacker {
@@ -1327,10 +1330,8 @@ ul::-webkit-scrollbar-thumb {
     bottom: 50px;
     left: 10px;
     background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 0, 0, 0.8);
     color: #0f0;
     padding: 5px 10px;
-    font-family: monospace;
     font-size: 14px;
     border-radius: 5px;
     z-index: 9999;
@@ -1341,10 +1342,8 @@ ul::-webkit-scrollbar-thumb {
     bottom: 80px;
     left: 10px;
     background: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(80, 1, 1, 0.8);
     color: #0f0;
     padding: 5px 10px;
-    font-family: monospace;
     font-size: 14px;
     border-radius: 5px;
     z-index: 9999;
@@ -1360,7 +1359,7 @@ input[type="submit"] {
     color: #aaa;
     background: #222;
     border: 3px solid #411 ;
-    border-radius: 4px;
+    border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -1403,9 +1402,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    border: 2px solid #888;
+    border: 2px solid #000;
     border-radius: 4px;
-    background: #ccc;
+    background: #202020;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
@@ -1413,8 +1412,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-    background: #bbb;
-    border-color: #666;
+    background: #606060;
+    border-color: #303030;
 }
 
 input[type="checkbox"]:focus {
@@ -1423,8 +1422,8 @@ input[type="checkbox"]:focus {
 }
 
 input[type="checkbox"]:checked {
-    background: #f00;
-    border-color: #a00;
+    background: #b44ac0;
+    border-color: #811e9f;
 }
 
 input[type="checkbox"]:checked::after {
@@ -1567,8 +1566,9 @@ textarea {
     color: #fff;
 
 
-    background: rgba(120, 20, 20, 0.8);
-    border: 1px solid rgba(200, 80, 80, 0.4);
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
     border-radius: 2px;
 
     outline: none;
@@ -1579,21 +1579,12 @@ input[type="text"]:hover,
 input[type="search"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
-textarea:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
-}
 
 
 input[type="text"]:focus,
 input[type="search"]:focus,
 input[type="number"]:focus,
 input[type="password"]:focus,
-textarea:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 6px rgba(255, 100, 100, 0.4);
-}
 
 
 input::placeholder,
@@ -1601,39 +1592,6 @@ textarea::placeholder {
     color: #fff;
     font-style: italic;
 }
-
-
-select {
-    padding: 4px 8px;
-    /* compact size */
-    font-size: 14px;
-    color: #fff;
-    background: rgba(120, 20, 20, 0.8);
-    /* dark red with alpha */
-    border: 1px solid rgba(200, 80, 80, 0.4);
-    border-radius: 6px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.25s ease;
-    appearance: none;
-    /* removes default arrow on some browsers */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-
-select:hover {
-    background: rgba(150, 30, 30, 0.85);
-    border-color: rgba(220, 100, 100, 0.6);
-}
-
-
-select:focus {
-    background: rgba(170, 40, 40, 0.9);
-    border-color: rgba(255, 120, 120, 0.8);
-    box-shadow: 0 0 4px rgba(255, 100, 100, 0.3);
-}
-
 
 select::-ms-expand {
     display: none;
@@ -1694,8 +1652,8 @@ select::-ms-expand {
 hr {
     border: none;
     height: 4px;
-    background-color: #8B0000;
-    box-shadow: 0 2px 6px rgba(139, 0, 0, 0.5);
+    background-color: #b44ac0;
+    box-shadow: 0 2px 6px rgba(129, 30, 159, 0.5);
     margin: 20px 0;
     border-radius: 2px;
 }
@@ -1733,62 +1691,28 @@ fieldset {
 
 a:link,
 a:visited {
-    color: #8B0000;
+    color: #b44ac0;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover,
 a:active {
-    color: #FF0000;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    color: #b44ac0;
+    text-shadow: 0 0 5px rgba(125, 30, 159, 0.7);
 }
 
 /* For inline SVG */
-svg:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 0.6));
-    transition: transform 0.3s, filter 0.3s;
-}
-
-svg:active {
-    transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 0.8));
-}
-
-
-img[src$=".svg"]:not(.nohover):hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 4px 10px rgba(139, 0, 0, 1));
-    transition: transform 0.3s, filter 0.3s;
-    cursor: pointer;
-}
-
-img[src$=".svg"]:not(.nohover):active {
-    transform: scale(0.98);
-    filter: drop-shadow(0 2px 8px rgba(139, 0, 0, 1));
-}
-
-
 input[type="color"] {
     width: 50px;
     height: 30px;
-    border: 2px solid #6A0000;
-    background-color: #8B0000;
+    border: 2px solid #811e9f;
+    background-color: #b44ac0;
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-input[type="color"]:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 8px rgba(139, 0, 0, 0.7);
-}
-
-input[type="color"]:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 4px rgba(139, 0, 0, 0.9);
-}
 
 #toggled {
     display: none;
@@ -1816,18 +1740,6 @@ input[type="color"]:active {
     overflow: auto;
 }
 
-.result {
-    border-radius: 10px;
-    border: 1px solid rgb(212, 0, 0);
-    background-color: rgb(110, 0, 0);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    margin: 10px 0;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    
-}
 .stretchText {
     white-space: nowrap;
     overflow: hidden;
