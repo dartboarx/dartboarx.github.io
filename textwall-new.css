@@ -169,7 +169,6 @@ body.menu-open #bubbles {
     .tool:hover,.bubble.clickable:hover {
         background-color: #811e9f;
         border-width: 2px;
-        display: none;
     }
 }
 
@@ -222,7 +221,7 @@ body.menu-open #bubbles {
 .badge {
     background-color: #fff;
     color: #000;
-    border-radius: 50%;
+    border-radius: 50cqmin;
     corner-shape: squircle;
     padding: 1px 4px;
     font-size: 164x;
@@ -414,7 +413,7 @@ input {
     box-sizing: border-box;
     overflow: auto;
     transition: all 50ms;
-    border-radius: 50%;
+    border-radius: 50cqmin;
     corner-shape: squircle;
     margin: 4px;
     cursor: pointer;
@@ -820,7 +819,7 @@ td {
     padding-right: 5px;
     padding-left: 5px;
     height: 20px;
-    border-radius: 50%;
+    border-radius: 50cqmin;
     corner-shape: squircle;
     background-color: #fff;
     position: absolute;
@@ -1275,7 +1274,7 @@ td {
 }
 
 .channelbar > button {
-    border-radius: 50%;
+    border-radius: 50cqmin;
     color: #fff;
     border: 1px solid #fff;
     background: #000;
@@ -1492,7 +1491,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 16px;
     background: #888;
     /* grey thumb */
-    border-radius: 50%;
+    border-radius: 50cqmin;
     border: 2px solid #666;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -1515,7 +1514,7 @@ input[type="range"]::-moz-range-thumb {
     width: 16px;
     height: 16px;
     background: #888;
-    border-radius: 50%;
+    border-radius: 50cqmin;
     border: 2px solid #666;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -1548,7 +1547,7 @@ input[type="range"]::-ms-thumb {
     width: 16px;
     height: 16px;
     background: #888;
-    border-radius: 50%;
+    border-radius: 50cqmin;
     border: 2px solid #666;
     cursor: pointer;
     transition: all 0.2s ease;
