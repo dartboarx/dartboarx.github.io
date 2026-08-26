@@ -205,11 +205,9 @@ body.menu-open #bubbles {
     height: 540px;
     max-height: 87.5vh;
     width: 300px;
-    min-width: 240px;
-    max-width: 25vw;
     min-height: 40vh;
     overflow: auto;
-    resize: both;
+    resize: vertical;
 
     display: flex;
     justify-content: space-between;
@@ -773,6 +771,7 @@ td {
     display: flex;
     flex-direction: column;
     pointer-events: auto;
+    transform-origin: bottom left;
     gap: 8px;
 }
 #stacker {
@@ -846,6 +845,7 @@ td {
 #chatbutton {
     background-color: rgba(0,0,0,.75);
     border: 1px solid #fff;
+    border-right-width: 0;
     padding: 10px;
     border-radius: 0 0 0 12px;
     box-shadow: 0 0 4px #fff;
