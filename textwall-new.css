@@ -758,7 +758,7 @@ td {
     position: relative; 
     width: 300px;
     min-width: 240px;
-    max-width: 25vh;
+    max-width: 25vw;
     min-height: 180px;
     max-height: 87.5vh;
     resize: both;
