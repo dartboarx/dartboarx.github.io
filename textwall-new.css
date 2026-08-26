@@ -1622,7 +1622,7 @@ textarea::placeholder {
 select > option {
     padding: 4px 8px;
     font-size: 14px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: #000;
     backdrop-filter: blur(4px);
     border: 1px solid #fff; /* PLEASE*/
     color: rgba(255,255,255,0.5);
