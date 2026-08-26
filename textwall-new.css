@@ -170,11 +170,12 @@ body.menu-open #bubbles {
 
 .bubble.clickable {
     cursor: pointer;
-    transition: background-color .5s
+    transition: background-color .5s;
+    box-shadow: none;
+
 }
 @media (hover: hover) {
-    .tool:hover,.bubble.clickable:hover {
-        background-color: #811e9f;
+    .tool:hover,.bubble.clickable:hover,.infobtn:not(.disabled):hover {
     box-shadow: 0 0 4px #fff;
     }
 }
@@ -184,7 +185,8 @@ body.menu-open #bubbles {
 }
 
 .infobtn.enabled {
-    background-color: #b44ac0
+    background-color: #b44ac0;
+    box-shadow: 0 0 4px #811e9f;    
 }
 
 .infobtn.disabled {
@@ -204,7 +206,6 @@ body.menu-open #bubbles {
     width: 280px;
     height: 540px;
     max-height: 87.5vh;
-    width: 300px;
     min-height: 40vh;
     overflow: auto;
     resize: vertical;
