@@ -752,6 +752,12 @@ td {
 .chatcontainer {
     position: relative; 
     width: 300px;
+    resize: vertical;
+    min-width: 240px;
+    max-width: 25vh;
+    min-height: 180px;
+    max-height: 87.5vh;
+    resize: both;
     background: rgba(0,0,0,.75);
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
@@ -759,7 +765,7 @@ td {
     display: flex;
     flex-direction: column;
     pointer-events: auto;
-    box-shadow: 0 6px 18px rgba(129,30,159,.25);
+    box-shadow: 0 0 4px #fff;
     gap: 8px;
 }
 #stacker {
@@ -835,6 +841,7 @@ td {
     border: 1px solid #fff;
     padding: 10px;
     border-radius: 0 0 0 12px;
+    box-shadow: 0 0 4px #fff;
     corner-shape: bevel;
     margin-bottom: 10px;
     pointer-events: auto;
