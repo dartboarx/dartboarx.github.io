@@ -84,7 +84,7 @@ h3 {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 4px #fff;
     transition: opacity .5s
 }
 
@@ -93,8 +93,8 @@ h3 {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
-    bottom: 10px;
+    box-shadow: 0 0 4px #fff;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 8px 8px 0 0;
@@ -160,7 +160,7 @@ body.menu-open #bubbles {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 4px #fff;
     border-radius: 25cqmin 50cqmin 50cqmin 25cqmin; /* WHY DOES THIS NOT WORK */
     align-items: center;
     min-height: 20px;
@@ -176,7 +176,7 @@ body.menu-open #bubbles {
 @media (hover: hover) {
     .tool:hover,.bubble.clickable:hover {
         background-color: #811e9f;
-        border-width: 2px;
+    box-shadow: 0 0 4px #fff;
     }
 }
 
@@ -196,7 +196,7 @@ body.menu-open #bubbles {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 4px #fff;
     position: fixed;
     top: 0px;
     left: 0;
@@ -254,13 +254,15 @@ body.menu-open #bubbles {
 }
 .tab-btn {
   appearance:none;-webkit-appearance:none;
-  background:transparent;color:#fff;
-  border:1px solid rgba(255,255,255,0.03);
+  background-color: #000;
+  border:1px solid #fff;
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
 }
 .tab-btn.active { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); }
-.tab-btn:hover { filter:brightness(1.06); }
+.tab-btn:hover { 
+    box-shadow: 0 0 4px #fff;
+}
 
 .tab-contents {
   flex: 1 1 auto;
@@ -320,7 +322,8 @@ body.menu-open #bubbles {
 .member:hover {
     text-decoration: line-through;
     font-weight: 700;
-    background-color: #C12907
+    background-color: #C12907;
+    box-shadow: 0 0 4px #6D250E;
 }
 
 #register,
@@ -391,7 +394,7 @@ input {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 4px #fff;
     display: flex;
     /* center */
     top: unset;
@@ -431,6 +434,9 @@ input {
     corner-shape: squircle;
     margin: 4px;
     cursor: pointer;
+}
+#colourlist > div:hover {
+    box-shadow: 0 0 4px #fff;
 }
 #customcolour {
     margin: 4px;
@@ -532,7 +538,7 @@ td {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 4px #fff;
     border-radius: 5px;
     margin: 5px;
     transition: opacity 0.5s;
@@ -566,7 +572,7 @@ td {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    box-shadow: 0 0 8px #fff;
+    box-shadow: 0 0 4px #fff;
     margin: 15px;
     padding: 5px;
     width: 330px;
@@ -828,7 +834,7 @@ td {
     background-color: rgba(0,0,0,.75);
     border: 1px solid #fff;
     padding: 10px;
-    border-radius: 0 0 0 50cqmin;
+    border-radius: 0 0 0 12px;
     corner-shape: bevel;
     margin-bottom: 10px;
     pointer-events: auto;
@@ -1384,11 +1390,11 @@ input[type="submit"] {
 
 
 button:hover,
-input[type="button"],
+input[type="button"]:hover,
 input[type="submit"]:hover {
     background: #666;
     transform: translateY(-1px);
-   box-shadow: 0 0 8px #fff;
+   box-shadow: 0 0 4px #fff;
 
 }
 
