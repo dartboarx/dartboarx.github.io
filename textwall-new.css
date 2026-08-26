@@ -1619,6 +1619,22 @@ textarea::placeholder {
     font-style: italic;
 }
 
+select {
+    padding: 4px 8px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid #fff; /* PLEASE*/
+    color: rgba(255,255,255,0.5);
+    box-shadow: 0 0 4px #fff;
+}
+
+select:hover {
+    color: #fff;
+    box-shadow: 0 0 4px #fff;
+    text-shadow: 0 0 4px #fff;
+}
+
 select::-ms-expand {
     display: none;
     /* hide default arrow in IE */
