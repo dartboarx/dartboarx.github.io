@@ -76,12 +76,15 @@ h3 {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(30, 30, 30, .8);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 4;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid #fff;
     color: #fff;
+    box-shadow: 0 0 0 4px 0 #fff;
     transition: opacity .5s
 }
 
@@ -90,6 +93,7 @@ h3 {
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
+    box-shadow: 0 0 0 4px 0 #fff;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -152,12 +156,13 @@ body.menu-open #bubbles {
 
 .bubble {
     pointer-events: all;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
     border: 1px solid #fff;
     color: #fff;
-    border-radius: 0 50cqmin 50cqmin 0; /* WHY DOES THIS NOT WORK */
+    box-shadow: 0 0 0 4px 0 #fff;
+    border-radius: 25cqmin 50cqmin 50cqmin 25cqmin; /* WHY DOES THIS NOT WORK */
     align-items: center;
-    backdrop-filter: blur(4px);
     min-height: 20px;
     padding: 8px;
     font-size: 16px;
@@ -187,15 +192,16 @@ body.menu-open #bubbles {
     opacity: 0.5
 }
 #sidemenu {
-    border: 1px solid #fff;
-    background-color: rgba(0,0,0,.75);
-    color: #fff;
+    background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
+    border: 1px solid #fff;
+    color: #fff;
+    box-shadow: 0 0 0 4px 0 #fff;
     position: fixed;
-    top: 10px;
+    top: 0px;
     left: 0;
     padding: 5px 10px;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 0 5px 0;
     width: 280px;
     height: 540px;
     max-height: 70vh;
@@ -304,7 +310,8 @@ body.menu-open #bubbles {
 .member {
     padding: 5px;
     margin: 3px;
-    background-color: rgba(0,0,0,.5);
+    background-color: #000;
+    color: #fff;
     border-radius: 5px;
     font-size: 12px;
     cursor: pointer
@@ -313,7 +320,7 @@ body.menu-open #bubbles {
 .member:hover {
     text-decoration: line-through;
     font-weight: 700;
-    background-color: red
+    background-color: #C12907
 }
 
 #register,
@@ -380,6 +387,11 @@ input {
 }
 
 #colourcontainer {
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid #fff;
+    color: #fff;
+    box-shadow: 0 0 0 4px 0 #fff;
     display: flex;
     /* center */
     top: unset;
@@ -392,19 +404,17 @@ input {
     width: 90%;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: rgba(0,0,0,.5);
     border-radius: 8px;
     padding: 4px;
-    border: 1px solid #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,.5);
 }
 #colourlist {
     border: 1px solid #fff;
-    border-radius: 5%;
+    background: none;
+    border-radius: 5px;
     display: inline-grid;
     grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9%;
     width: 100%;
-    gap: 4px;
+    gap: 2%;
     overflow: auto;
 }
 #colourlist > div {
@@ -417,7 +427,7 @@ input {
     box-sizing: border-box;
     overflow: auto;
     transition: all 50ms;
-    border-radius: 100%;
+    border-radius: 50%;
     corner-shape: squircle;
     margin: 4px;
     cursor: pointer;
@@ -518,8 +528,11 @@ td {
 
 #toast {
     position: absolute;
-    background-color: rgba(30, 30, 30, 0.8);
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid #fff;
     color: #fff;
+    box-shadow: 0 0 0 4px 0 #fff;
     border-radius: 5px;
     margin: 5px;
     transition: opacity 0.5s;
@@ -549,9 +562,11 @@ td {
     z-index: 2;
     text-align: center;
     transition: all .5s;
-    background: rgba(0,0,0,.75);
+    background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
     border: 1px solid #fff;
+    color: #fff;
+    box-shadow: 0 0 0 4px 0 #fff;
     margin: 15px;
     padding: 5px;
     width: 330px;
@@ -612,8 +627,8 @@ td {
 }
 
 .tpcontent > hr, #walllist hr {
-    border: 0.5px solid rgba(255, 0, 0, 0.2) !important;
-    background-color: rgba(70,0,0,0.6) !important;
+    border: 0.5px solid #811e9f !important;
+    background-color: #b44ac0 !important;
     padding-top: 0 !important;
     box-shadow: none !important;
     margin: 8px 0 !important;
@@ -717,6 +732,7 @@ td {
     transition: all .5s;
     pointer-events: none;
     transform: translateX(327px);
+    resize: both;
 }
 
 .buttoncontainer {
@@ -801,8 +817,8 @@ td {
 
 #sendmsg {
     margin: 5px;
-    background-color: rgb(36, 36, 36);
-    border: 1px solid rgb(75, 69, 69);
+    background-color: #b44ac0;
+    border: 1px solid #811e9f;
     width: 20px;
     padding: 5px;
     margin: 5px 0 0 5px
@@ -812,6 +828,8 @@ td {
     background-color: rgba(0,0,0,.75);
     border: 1px solid #fff;
     padding: 10px;
+    border-radius: 0 0 0 50cqmin;
+    corner-shape: bevel;
     margin-bottom: 10px;
     pointer-events: auto;
     position: relative;
@@ -1273,10 +1291,9 @@ td {
 
 .channelbar {
     background: #000;
-    border: 1px solid white
-
+    border: 1px solid white;
+    grid-template-columns: 25% 25%;
 }
-
 .channelbar > button {
     border-radius: 50cqmin;
     color: #fff;
@@ -1288,7 +1305,6 @@ td {
 }
 .channel-btn.active {
     color: #b44ac0;
-    border-color: #aaa;
 }
 .buttons {
     display: flex;
@@ -1372,7 +1388,8 @@ input[type="button"],
 input[type="submit"]:hover {
     background: #666;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+   box-shadow: 0 0 0 4px 0 #fff;
+
 }
 
 button:focus,
@@ -1403,9 +1420,9 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    border: 2px solid #000;
+    border: 2px solid #ddd;
     border-radius: 4px;
-    background: #202020;
+    background: #fff;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
@@ -1413,8 +1430,8 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:hover {
-    background: #606060;
-    border-color: #303030;
+    background: #ccc;
+    border-color: #999;
 }
 
 input[type="checkbox"]:focus {
@@ -1575,19 +1592,6 @@ textarea {
     outline: none;
     transition: all 0.25s ease;
 }
-
-input[type="text"]:hover,
-input[type="search"]:hover,
-input[type="number"]:hover,
-input[type="password"]:hover,
-
-
-input[type="text"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-
-
 input::placeholder,
 textarea::placeholder {
     color: #fff;
@@ -1683,7 +1687,7 @@ hr {
 
 /* i like stylizing */
 fieldset {
-    border: 2px solid #811e9f;
+    border: 2px solid #fff;
     box-shadow: 0 4px 10px rgba(129, 30, 159, 0.5);
     border-radius: 6px;
     padding: 1em;
