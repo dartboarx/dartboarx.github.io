@@ -82,7 +82,6 @@ h3 {
     z-index: 4;
     background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(4px);
-    border: 1px solid #fff;
     color: #fff;
     box-shadow: 0 0 4px #fff;
     transition: opacity .5s
@@ -204,7 +203,14 @@ body.menu-open #bubbles {
     border-radius: 0 0 5px 0;
     width: 280px;
     height: 540px;
-    max-height: 70vh;
+    max-height: 87.5vh;
+    width: 300px;
+    min-width: 240px;
+    max-width: 25vw;
+    min-height: 40vh;
+    overflow: auto;
+    resize: both;
+
     display: flex;
     justify-content: space-between;
     -webkit-user-select: none;
@@ -761,6 +767,7 @@ td {
     max-width: 25vw;
     min-height: 180px;
     max-height: 87.5vh;
+    overflow: auto;
     resize: both;
     padding: 12px;
     display: flex;
