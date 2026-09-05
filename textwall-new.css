@@ -861,11 +861,11 @@ td {
 #chatmsg {
     width: 100%;
     user-select: none;
-    border-radius: 25% 0 0 25%
+    border-radius: 25cqmin 0 0 25cqmin;
+    margin: 5px 0 0 5px;
 }
 
 #sendmsg {
-    margin: 5px;
     background-color: #b44ac0;
     border: 1px solid #811e9f;
     border-radius: 0 25% 25% 0;
