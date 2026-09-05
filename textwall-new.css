@@ -100,11 +100,13 @@ h3 {
     padding: 4px 10px;
     font-size: 18px;
     pointer-events: auto;
-    transition: all 0.9s;
+    transition: all 0.5s;
     z-index: 2;
     position: absolute;
-    width: 90%;         
-    max-width: 500px; 
+    width: 90%;
+          
+    max-width: 500px;
+  
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -121,8 +123,10 @@ h3 {
    position: fixed;
   left: 10px;
   transition: transform .12s ease;
-  z-index: 1000; 
-  pointer-events: none; 
+  z-index: 1000;
+  
+  pointer-events: none;
+  
 }
 
 .bubbles-container .bubble,
@@ -141,7 +145,8 @@ h3 {
 
 }
 body.menu-open #bubbles {
-  transform: translateX(300px); /* match sidemenu width */
+  transform: translateX(300px);
+  /* match sidemenu width */
 }
 
 .separator {
@@ -160,7 +165,8 @@ body.menu-open #bubbles {
     border: 1px solid #fff;
     color: #fff;
     box-shadow: 0 0 4px #fff;
-    border-radius: 25cqmin 50cqmin 50cqmin 25cqmin; /* WHY DOES THIS NOT WORK */
+    border-radius: 25cqmin 50cqmin 50cqmin 25cqmin;
+  /* WHY DOES THIS NOT WORK */
     align-items: center;
     min-height: 20px;
     padding: 8px;
@@ -186,7 +192,8 @@ body.menu-open #bubbles {
 
 .infobtn.enabled {
     background-color: #b44ac0;
-    box-shadow: 0 0 4px #811e9f;    
+    box-shadow: 0 0 4px #811e9f;
+     
 }
 
 .infobtn.disabled {
@@ -251,8 +258,10 @@ body.menu-open #bubbles {
   display:flex;
   gap:6px;
   align-items:center;
-   overflow-x: auto; /* allow horizontal scroll only */
-  overflow-y: hidden; /* hide vertical overflow */
+   overflow-x: auto;
+  /* allow horizontal scroll only */
+  overflow-y: hidden;
+  /* hide vertical overflow */
   padding-bottom:6px;
   border-bottom:1px solid rgba(255,255,255,0.03);
   box-sizing:border-box;
@@ -263,7 +272,9 @@ body.menu-open #bubbles {
   padding:6px 8px;border-radius:4px;
   text-align:center;cursor:pointer;font-size:13px;
 }
-.tab-btn.active { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.12); }
+.tab-btn.active { background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.12);
+  }
 .tab-btn:hover { 
     box-shadow: 0 0 4px #fff;
 }
@@ -277,25 +288,43 @@ body.menu-open #bubbles {
   box-sizing: border-box;
 
   /* hide scrollbar */
-  scrollbar-width: none;       /* Firefox */
-  -ms-overflow-style: none;    /* IE 10+ */
+  scrollbar-width: none;
+        /* Firefox */
+  -ms-overflow-style: none;
+     /* IE 10+ */
 }
 .tab-contents::-webkit-scrollbar {
-  display: none;               /* Chrome, Safari, Edge */
+  display: none;
+                /* Chrome, Safari, Edge */
 }
 
-.tab-content { display:none; }
-.tab-content.active { display:block; }
+.tab-content { display:none;
+  }
+.tab-content.active { display:block;
+  }
 
 
 .tab-content input[type="text"], .tab-content input[type="password"], .tab-content input[type="number"], .tab-content select, .tab-content textarea {
-  width:100%; box-sizing:border-box; margin:4px 0 8px; padding:6px; background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.04); color:#fff; border-radius:4px;
+  width:100%;
+  box-sizing:border-box;
+  margin:4px 0 8px;
+  padding:6px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.04);
+  color:#fff;
+  border-radius:4px;
+  transition: all .25s;
 }
-.tab-content input[type="checkbox"]{ margin-right:6px; }
+.tab-content input[type="checkbox"]{
+    margin-right:6px;
+}
 .tab-content button, .tab-content input[type="submit"], .tab-content .buttonlink {
-  background: rgba(255,255,255,0.03); color: #fff; border: 1px solid rgba(255,255,255,0.04);
-  padding:6px 8px; border-radius:4px; cursor:pointer;
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.04);
+  padding:6px 8px;
+  border-radius:4px;
+  cursor:pointer;
 }
 
 #admin,
@@ -426,8 +455,10 @@ input {
     overflow: auto;
 }
 #colourlist > div {
-    flex: 0 0 auto;  
-    width: 20px;     
+    flex: 0 0 auto;
+   
+    width: 20px;
+      
     height: 20px;
     display: flex;
     align-items: center;
@@ -488,7 +519,7 @@ td {
     width: 34px;
     padding: 0 0;
     vertical-align: middle;
-    transition: all .1s;
+    transition: all .25s;
     flex-grow: 2;
     display: flex;
     justify-content: center;
@@ -629,11 +660,8 @@ td {
 .tpcontent button,
 .tpcontent input[type="submit"] {
     margin-top: 5px;
-    background-color: #811e9f;
-    border: 1px solid #b44ac0;
-    color: #fff;
     border-radius: 4px;
-    transition: all .1s;
+    transition: all .25s;
     cursor: pointer;
 }
 
@@ -662,7 +690,7 @@ td {
 
 #closeteleport {
     position: absolute;
-    transition: all .1s;
+    transition: all .25s;
     top: 5px;
     right: 5px
 }
@@ -736,7 +764,6 @@ td {
 #chat {
     position: absolute;
     top: 0;
-    color: #E80000;
     right: 0;
     display: flex;
     height: 320px;
@@ -760,14 +787,13 @@ td {
     border: 1px solid #fff;
     color: #fff;
     box-shadow: 0 0 4px #fff;
-    position: relative; 
-    width: 300px;
-    min-width: 240px;
-    max-width: 25vw;
+    position: relative;
+  
+    width: 320px;
     min-height: 180px;
     max-height: 87.5vh;
     overflow: auto;
-    resize: both;
+    resize: vertical;
     padding: 12px;
     display: flex;
     flex-direction: column;
@@ -776,9 +802,12 @@ td {
     gap: 8px;
 }
 #stacker {
-    position: relative; /* container for absolute chatboxes */
-    flex: 1;            /* take available space in .chatcontainer */
-    min-height: 0;      /* required for flex scroll */
+    position: relative;
+  /* container for absolute chatboxes */
+    flex: 1;
+             /* take available space in .chatcontainer */
+    min-height: 0;
+       /* required for flex scroll */
     
 }
 #_msg{
@@ -786,15 +815,18 @@ td {
    margin: 6px 0 5px 5px;
 }
 .chatbox {
-    position: absolute; /* stack chatboxes on top of each other */
-    top: 0; /* adjust if you have channel buttons above */
+    position: absolute;
+  /* stack chatboxes on top of each other */
+    top: 0;
+  /* adjust if you have channel buttons above */
     left: 0;
     word-wrap: break-word;
     right: 0;
     bottom: 0;
     overflow-y: auto;
     display: none;
-     padding-right: 6px; /* prevent scrollbar from overlapping text */
+     padding-right: 6px;
+  /* prevent scrollbar from overlapping text */
     
 }
 .chatbox.active {
@@ -827,20 +859,30 @@ td {
 }
 
 #chatmsg {
-    border-radius: 1px;
-    border: 1px #666 solid;
     width: 100%;
-    background-color: rgba(75, 69, 69, 0.8);
-    user-select: none
+    user-select: none;
+    border-radius: 25% 0 0 25%
 }
 
 #sendmsg {
     margin: 5px;
     background-color: #b44ac0;
     border: 1px solid #811e9f;
+    border-radius: 0 25% 25% 0;
     width: 20px;
     padding: 5px;
     margin: 5px 0 0 5px
+}
+
+#sendmsg:hover {
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
+    box-shadow: 0 0 4px #fff;
 }
 
 #chatbutton {
@@ -878,7 +920,7 @@ td {
 
 .button {
     cursor: pointer;
-    transition: all .1s;
+    transition: all .25s;
     user-select: none
 }
 
@@ -1304,10 +1346,13 @@ td {
     box-sizing: border-box;
     flex: 1;
 
-    display: flex;              /* âœ” make it a flex parent */
-    flex-direction: column;     /* âœ” stack children vertically */
+    display: flex;
+               /* âœ” make it a flex parent */
+    flex-direction: column;
+      /* âœ” stack children vertically */
 
-    min-height: 0;              /* âœ” prevents overflow issues */
+    min-height: 0;
+               /* âœ” prevents overflow issues */
 }
 
 .channelbar {
@@ -1403,6 +1448,7 @@ input[type="submit"] {
     border-image: none;
     padding: 6px 8px;
     border-radius: 4px;
+    transition: all .25s;
 }
 
 
@@ -1410,7 +1456,6 @@ button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover {
    box-shadow: 0 0 4px #fff;
-
 }
 
 button:focus,
@@ -1444,7 +1489,7 @@ input[type="checkbox"] {
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all .25s ease;
     position: relative;
     outline: none;
 }
@@ -1493,57 +1538,90 @@ input[type="checkbox"]:checked:disabled {
 }
 
 input[type="range"] {
+    -webkit-appearance: none;
     appearance: none;
     width: 150px;
     height: 6px;
     background: #fff;
-    /* track color (unfilled) */
     border-radius: 3px;
     outline: none;
-    /* remove focus outline */
-    transition: all 0.2s ease;
+    transition: all .25s ease;
     cursor: pointer;
 }
-
 
 input[type="range"]:hover {
     box-shadow: 0 0 4px #fff;
 }
 
-input[type="range"]::-webkit-slider-runnable-track,
-input[type="range"]::-moz-range-track, 
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #fff;
+    border-radius: 3px;
+}
+input[type="range"]::-moz-range-track {
+    height: 6px;
+    background: #fff;
+    border-radius: 3px;
+}
 input[type="range"]::-ms-track {
     height: 6px;
     background: #fff;
     border-radius: 3px;
 }
-input[type="range"]::-webkit-slider-thumb,
-input[type="range"]::-moz-range-thumb,
-input[type="range"]::-ms-thumb {
+
+input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
+    appearance: none;
     width: 8px;
     height: 8px;
     background: #b44ac0;
-    /* grey thumb */
-    border-radius: 50cqmin;
+    border-radius: 50%;
     border: 2px solid #811e9f;
-    transition: all 0.2s ease;
+    transition: all .25s ease;
     cursor: pointer;
-    margin-top: -5px;
-    /* center thumb on track */
+    margin-top: -3px;
+  
+    box-sizing: border-box;
 }
-input[type="range"]::-webkit-slider-thumb:hover,
-input[type="range"]::-moz-range-thumb:hover,
+input[type="range"]::-moz-range-thumb {
+    width: 8px;
+    height: 8px;
+    background: #b44ac0;
+    border-radius: 50%;
+    border: 2px solid #811e9f;
+    transition: all .25s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+input[type="range"]::-ms-thumb {
+    width: 8px;
+    height: 8px;
+    background: #b44ac0;
+    border-radius: 50%;
+    border: 2px solid #811e9f;
+    transition: all .25s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 4px #b44ac0;
+    transform: scale(2);
+}
 input[type="range"]::-moz-range-thumb:hover {
     box-shadow: 0 0 4px #b44ac0;
     transform: scale(2);
 }
+input[type="range"]::-ms-thumb:hover {
+    box-shadow: 0 0 4px #b44ac0;
+    transform: scale(2);
+}
 
+/* 5. Internet Explorer Fills */
 input[type="range"]::-ms-fill-lower {
     background: #ccc;
     border-radius: 3px;
 }
-
 input[type="range"]::-ms-fill-upper {
     background: #ccc;
     border-radius: 3px;
@@ -1553,17 +1631,24 @@ input[type="search"],
 input[type="number"],
 input[type="password"],
 textarea {
-    padding: 4px 2px;
-    color: #fff;
+  width:100%;
+  box-sizing:border-box;
+  margin:4px 0 8px;
+  padding:6px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.04);
+  color:#fff;
+  border-radius:4px;
+  transition: all .25s;
+}
 
+input[type="text"]:hover,
+input[type="search"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+textarea {
+    box-shadow: 0 0 4px #fff;
 
-    background: #000;
-    border: 1px solid #fff;
-    color: #fff;
-    border-radius: 2px;
-
-    outline: none;
-    transition: all 0.25s ease;
 }
 input::placeholder,
 textarea::placeholder {
@@ -1576,7 +1661,8 @@ select > option {
     font-size: 14px;
     background-color: #000;
     backdrop-filter: blur(4px);
-    border: 1px solid #fff; /* PLEASE*/
+    border: 1px solid #fff;
+  /* PLEASE*/
     color: rgba(255,255,255,0.5);
     box-shadow: 0 0 4px #fff;
 }
@@ -1677,7 +1763,7 @@ hr {
 /* i like stylizing */
 fieldset {
     border: 2px solid #fff;
-    box-shadow: 0 4px 10px rgba(129, 30, 159, 0.5);
+    box-shadow: 0 0 4px #fff;
     border-radius: 6px;
     padding: 1em;
     margin: 1em 0;
@@ -1704,7 +1790,7 @@ input[type="color"] {
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s, box-shadow 0.25s;
 }
 
 
@@ -1775,7 +1861,7 @@ input[type="color"] {
     padding: 5px 10px;
     border-radius: 3px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all .25s ease;
 }
 
 #nsfwwarning .footer {
